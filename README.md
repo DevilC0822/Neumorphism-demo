@@ -2,7 +2,7 @@
 
 预览地址:<a href='http://175.24.198.84:5001/' target='_blank' rel="noopener">点我查看详情</a>
 
-新拟态生成:<https://neumorphism.io/#fafafa>
+新拟态生成:<https://neumorphism.io/>
 
 ## 什么是新拟态
 「新拟态」英文名Neumorphism，也有设计师称为 Soft Ui（软UI）。简单来说就是一种类似浮雕的效果，介于扁平与投影之间。其融合了拟态和平面设计技术，模仿真实物体的形态，为界面的UI元素赋予真实感，它是一种现实主义风格，也是非常值得探索的新设计风格。

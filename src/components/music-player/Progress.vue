@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, toRefs, watch } from 'vue'
+
+let props = defineProps<{
+  currentTime: number
+  totalTime: number
+}>()
+console.log(props)
+let { currentTime, totalTime } = toRefs(props)
+
+let proportion = ref('0%')
+watch(currentTime, (newValue) => {
+  proportion.value = `${(newValue / totalTime.value) * 100}%`
+})
+</script>
 
 <template>
   <div class="progress"></div>
@@ -19,7 +33,7 @@
   content: '';
   top: 0;
   left: 0;
-  width: 40%;
+  width: v-bind('proportion');
   height: 5px;
   border-radius: 5px;
   background: linear-gradient(145deg, #a9b5e7, #d2d7fd);
@@ -29,7 +43,7 @@
   position: absolute;
   content: '';
   top: 50%;
-  left: 40%;
+  left: v-bind('proportion');
   transform: translate(-40%, -50%);
   width: 15px;
   height: 15px;

@@ -15,5 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: linear-gradient(145deg, #eff1f3, #f6fafb);
+  min-height: 100vh;
 }
 </style>

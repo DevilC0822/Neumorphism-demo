@@ -13,6 +13,11 @@ const toPlayer = () => {
     path: './music-player',
   })
 }
+const toDrag = () => {
+  router.push({
+    path: './drag',
+  })
+}
 </script>
 
 <template>
@@ -24,6 +29,9 @@ const toPlayer = () => {
     <br />
     <br />
     <Button @click="toPlayer">音乐播放器</Button>
+    <br />
+    <br />
+    <Button @click="toDrag">拖拽</Button>
   </section>
 </template>
 

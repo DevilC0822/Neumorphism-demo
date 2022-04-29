@@ -16,6 +16,11 @@ const routes: RouteRecordRaw[] = [
     name: 'MusicPlayer',
     component: () => import('@/pages/music-player/main.vue'),
   },
+  {
+    path: '/drag',
+    name: 'Drag',
+    component: () => import('@/pages/drag/main.vue'),
+  },
 ]
 
 const router = createRouter({

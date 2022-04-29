@@ -81,7 +81,9 @@ watch(targetSongID, async (newValue) => {
   songAssign(res!)
 })
 
-const canplay = () => {}
+const canplay = () => {
+  totalTime.value = myAduio.value.duration
+}
 
 const ended = () => {
   next()
@@ -110,6 +112,12 @@ const back = () => {
   router.push({
     path: '/',
   })
+}
+let currentTime = ref(0)
+let totalTime = ref(0)
+
+const timeupdate = () => {
+  currentTime.value = myAduio.value.currentTime
 }
 </script>
 
@@ -141,7 +149,7 @@ const back = () => {
         {{ targetSong.artist }}
       </div>
 
-      <Progress></Progress>
+      <Progress :currentTime="currentTime" :totalTime="totalTime"></Progress>
       <div class="tool">
         <Button
           width="58px"
@@ -181,6 +189,7 @@ const back = () => {
     @canplay="canplay"
     @ended="ended"
     class="myAduio"
+    @timeupdate="timeupdate"
   ></audio>
 </template>
 
